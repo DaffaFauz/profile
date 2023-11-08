@@ -9,6 +9,7 @@
 
     <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
     <link rel="stylesheet" href="css/animate.css">
+	<link rel="icon" type="image/x-icon" href="images/icon.ico">
     
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
@@ -359,7 +360,7 @@
 
         <div class="row no-gutters block-9">
           <div class="col-md-6 order-md-last d-flex">
-            <form class="bg-light p-4 p-md-5 contact-form">
+            <form class="bg-light p-4 p-md-5 contact-form form">
               <div class="form-group">
                 <input type="text" id="nama" class="form-control" placeholder="Your Name" required>
               </div>
@@ -472,6 +473,7 @@ emailjs.send(serviceID, templateID, params)
 		showConfirmButton: false,
 		timer: 1500
 	})
+	document.querySelector('.form').reset()
     }, function(error) {
 		Swal.fire({
 			title: "Oops!",
@@ -479,7 +481,8 @@ emailjs.send(serviceID, templateID, params)
 			icon: 'error',
 			timer: 1500
 		})
-    });
+		document.querySelector('.form').reset()
+    })
 }
   </script>
   </body>
